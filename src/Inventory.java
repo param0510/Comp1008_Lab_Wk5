@@ -32,4 +32,9 @@ public class Inventory {
             return (getInventoryValue()/inventory.size());
         }
     }
+
+    @Override
+    public String toString() {
+        return String.format("Number of phones: " + inventory.size() + ", value of inventory: $" + "%.2f" , getInventoryValue());
+    }
 }
