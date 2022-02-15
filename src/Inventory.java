@@ -7,4 +7,7 @@ public class Inventory {
         inventory = new ArrayList<>();
     }
 
+    public void addPhone(Phone ph) {
+        inventory.add(ph);
+    }
 }
