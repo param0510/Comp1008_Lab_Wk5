@@ -23,4 +23,13 @@ public class Inventory {
         }
         return sum;
     }
+
+    public double getAvgPrice() {
+        if (inventory.size() == 0) {
+            return 0;
+        }
+        else {
+            return (getInventoryValue()/inventory.size());
+        }
+    }
 }
