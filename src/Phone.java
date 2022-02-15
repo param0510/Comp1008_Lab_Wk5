@@ -21,4 +21,13 @@ public class Phone {
         }
 
     }
+
+    public void setPrice(double price) {
+        if (price >= 0 && price <= 3000) {
+            this.price = price;
+        }
+        else {
+            throw new IllegalArgumentException(price + " is not valid price as it does not belong in the range 0 to 3000.");
+        }
+    }
 }
