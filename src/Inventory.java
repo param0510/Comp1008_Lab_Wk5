@@ -37,4 +37,21 @@ public class Inventory {
     public String toString() {
         return String.format("Number of phones: " + inventory.size() + ", value of inventory: $" + "%.2f" , getInventoryValue());
     }
+
+    public Phone getCheapest() {
+        if (inventory.size() == 0) {
+            return null;
+        }
+        else {
+            double min = inventory.get(0).getPrice();
+            Phone cheapestPhone = inventory.get(0);
+            for (int i = 0; i < inventory.size(); i++) {
+                if (inventory.get(i).getPrice() < min) {
+                    min = inventory.get(i).getPrice();
+                    cheapestPhone = inventory.get(i);
+                }
+            }
+            return cheapestPhone;
+        }
+    }
 }
