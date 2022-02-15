@@ -14,4 +14,13 @@ public class Inventory {
     public int getNumOfPhones() {
         return inventory.size();
     }
+
+    public double getInventoryValue() {
+        double sum = 0;
+        for (int i = 0; i < inventory.size(); i++)
+        {
+            sum = sum + inventory.get(i).getPrice();
+        }
+        return sum;
+    }
 }

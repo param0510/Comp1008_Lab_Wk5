@@ -57,4 +57,8 @@ public class Phone {
     public String toString() {
         return String.format(make+"-"+model + ", memory: " + memory + " price: $" + "%.2f",price);
     }
+
+    public double getPrice() {
+        return price;
+    }
 }
