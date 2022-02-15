@@ -52,4 +52,9 @@ public class Phone {
             throw new IllegalArgumentException(memory + " is not a valid memory value as it does fall under the range of 4 to 512");
         }
     }
+
+    @Override
+    public String toString() {
+        return String.format(make+"-"+model + ", memory: " + memory + " price: $" + "%.2f",price);
+    }
 }
