@@ -30,4 +30,17 @@ public class Phone {
             throw new IllegalArgumentException(price + " is not valid price as it does not belong in the range 0 to 3000.");
         }
     }
+
+    public static List<String> getValidMakes() {
+        return Arrays.asList("Apple", "HTC", "Samsung","Google","Moto");
+    }
+
+    public void setMake(String make) {
+        if (getValidMakes().contains(make)) {
+            this.make = make;
+        }
+        else{
+            throw new IllegalArgumentException(make + " is not a valid make as it does not belong to any one of " + getValidMakes());
+        }
+    }
 }
