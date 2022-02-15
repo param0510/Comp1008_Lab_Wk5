@@ -43,4 +43,13 @@ public class Phone {
             throw new IllegalArgumentException(make + " is not a valid make as it does not belong to any one of " + getValidMakes());
         }
     }
+
+    public void setMemory(int memory) {
+        if (memory >= 4 && memory <= 512) {
+            this.memory = memory;
+        }
+        else {
+            throw new IllegalArgumentException(memory + " is not a valid memory value as it does fall under the range of 4 to 512");
+        }
+    }
 }
