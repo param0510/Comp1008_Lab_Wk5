@@ -10,4 +10,8 @@ public class Inventory {
     public void addPhone(Phone ph) {
         inventory.add(ph);
     }
+
+    public int getNumOfPhones() {
+        return inventory.size();
+    }
 }
